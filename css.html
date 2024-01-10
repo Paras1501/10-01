@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            background-image: url('workplace.jpg');
+            background-repeat: no-repeat; 
+            background-position: right top;
+            background-attachment: fixed;
+          } */
+  
+        table,th,td {
+          border: 1px solid black;
+          /* border-radius: 10px; */
+          /* border-style: dotted solid double dashed; */
+        }
+        th, td {
+        background-color: #96D4D4;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 40px;
+  
+        }
+  
+        .mycontainer {
+        display: flex;
+        }
+        .mycontainer > div {
+        width:33%;
+        }
+        .city {
+          background-color: tomato;
+          color: white;
+          border: 2px solid black;
+          border-image: url(border.png) 30 round;
+          border-radius: 25px;
+          
+          margin: 20px;
+          padding: 20px;}
+  
+          #myHeader {
+          background-color: lightblue;
+          color: black;
+          padding: 40px;
+          text-align: center;
+          }
+          #margin{
+            border: 1px solid black;
+            /* margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px; */
+            margin: 0 0 50px 0;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+            overflow: scroll;
+            float: left;
+            background-color: lightblue;
+          }
+          img {
+          opacity: 1;
+          float: right;
+          z-index: 1;
+          }
+          .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+  
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+  
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        div.static {
+            position: static;
+            border: 3px solid #73AD21;
+            }
+        div.relative {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+        }
+        div.fixed {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+        }
+        div.fixed {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+        border-radius: 25px;
+        }
+        div.relative {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid #73AD21;
+        } 
+
+        div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        border: 3px solid #73AD21;
+        }
+        .overflowdiv {
+        background-color: coral;
+        width: 200px;
+        height: 65px;
+        border: 1px solid black;
+        overflow: auto;
+        }
+        span.a {
+        display: inline; /* the default for span */
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;  
+        background-color: yellow; 
+        }
+
+        span.b {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;    
+        background-color: yellow; 
+        }
+
+        span.c {
+        display: block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;    
+        background-color: yellow; 
+        }
+        div:hover {
+        background-color: blue;
+        }
+        /* div {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        transform: scale(2, 3);
+        transform: scaleX(2);
+        }
+
+        div#myDiv {
+        transform: rotate(20deg);
+        transform: rotateX(150deg);
+        transform: rotateZ(90deg);
+        } */
+      </style>
+</head>
+<body>
+    <img src="PHOTO.jpg" width="500" height="600" alt="Photo" /><br />
+    <p>
+        This paragraph contains a lot of lines in the source code, but the browser
+        ignores it.
+    </p>
+    <h1 style="background-color: rgb(255, 0, 0)">this is red</h1>
+    <br />
+    <h1 style="background-color: rgb(0, 0, 255)">this is blue</h1>
+    <br />
+
+    <h1 style="background-color: #ff0000">HEX</h1>
+    <br />
+    <h1 style="background-color: #0000ff">HEX</h1>
+    <br />
+
+    <h1 style="background-color: hsl(0, 100%, 50%)">HSL</h1>
+    <h1 style="background-color: hsl(240, 100%, 50%)">HSL</h1>
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+      </div>
+      
+      <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+      </div><hr>
+      <h1 id="myHeader">My Header</h1><hr>
+
+      <div class="static">
+        This div element has position: static;
+        </div>
+        <div class="relative">
+        This div element has position: relative;
+        </div>
+        <div class="fixed">
+            This div element has position: relative;
+        </div>
+        <div class="fixed">
+            This div element has position: relative;
+        </div>
+        <div class="overflow">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+        <h2>display: inline</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+        <h2>display: inline-block</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+        <h2>display: block</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+        <div>
+            This a normal div element.
+        </div>
+        <div id="myDiv">
+            This div element is rotated clockwise 20 degrees.
+        </div>
+
+</body>
+</html>
